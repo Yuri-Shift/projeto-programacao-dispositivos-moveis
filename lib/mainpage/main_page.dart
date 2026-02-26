@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(12.0),
         child: Scaffold(
           body: [
             DashboardPage(),
@@ -27,6 +27,7 @@ class _MainPageState extends State<MainPage> {
             UsuariosPage(),
           ][_index],
           bottomNavigationBar: NavigationBar(
+            selectedIndex: _index,
             onDestinationSelected: (value) {
               setState(() {
                 _index = value;
@@ -52,6 +53,18 @@ class _MainPageState extends State<MainPage> {
             elevation: 2,
             backgroundColor: Colors.lightGreenAccent,
             centerTitle: true,
+            /*             title: TextFormField(
+              decoration: InputDecoration(
+                hintText: 'Pesquisar',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                  borderSide: BorderSide.none,
+                ),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+            ),   */
             actions: [
               IconButton(
                 onPressed: () {
