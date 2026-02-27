@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tecsis/dashboard/pages/dashboard_page.dart';
 import 'package:tecsis/estoques/pages/estoque_page.dart';
-import 'package:tecsis/insumos/pages/insumos_page.dart';
+import 'package:tecsis/insumos/pages/insumos_list_page.dart';
 import 'package:tecsis/usuarios/pages/usuarios_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _MainPageState extends State<MainPage> {
         child: Scaffold(
           body: [
             DashboardPage(),
-            InsumosPage(),
+            InsumosListPage(),
             EstoquePage(),
             UsuariosPage(),
           ][_index],
